@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.cby2112114536.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_movie"
+        android:name="com.example.cby2112114536.ui.movie.MovieFragment"
+        android:label="@string/title_movie"
+        tools:layout="@layout/fragment_movie" />
+
+    <fragment
+        android:id="@+id/navigation_chart"
+        android:name="com.example.cby2112114536.ui.chart.ChartFragment"
+        android:label="@string/title_chart"
+        tools:layout="@layout/fragment_chart" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.cby2112114536.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_person"
+        android:name="com.example.cby2112114536.ui.person.PersonFragment"
+        android:label="@string/title_person"
+        tools:layout="@layout/fragment_person" />
+</navigation>

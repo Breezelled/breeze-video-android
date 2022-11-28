@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Breeze Video</string>
+    <string name="title_home">首页</string>
+    <string name="title_movie">热播影片</string>
+    <string name="title_search">搜索</string>
+    <string name="title_chart">数据分析</string>
+    <string name="title_person">我的</string>
+</resources>
