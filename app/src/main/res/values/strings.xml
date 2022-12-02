@@ -5,4 +5,13 @@
     <string name="title_search">搜索</string>
     <string name="title_chart">数据分析</string>
     <string name="title_person">我的</string>
+    <string name="guide_home_text">这里是首页～</string>
+    <string name="guide_next_page_text">下一个</string>
+    <string name="guide_previous_page_text">上一个</string>
+    <string name="guide_skip_text">跳过</string>
+    <string name="guide_tips_text">新手小TIPS</string>
+    <string name="guide_movie_text">这里是正在热播的影片哦～</string>
+    <string name="guide_search_text">这里可以搜索影片哦～</string>
+    <string name="guide_person_text">这里可以查看个人资料哦～</string>
+    <string name="guide_end_text">结束</string>
 </resources>
