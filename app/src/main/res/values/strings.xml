@@ -14,4 +14,5 @@
     <string name="guide_search_text">这里可以搜索影片哦～</string>
     <string name="guide_person_text">这里可以查看个人资料哦～</string>
     <string name="guide_end_text">结束</string>
+    <string name="splash_skip_text">跳过</string>
 </resources>
