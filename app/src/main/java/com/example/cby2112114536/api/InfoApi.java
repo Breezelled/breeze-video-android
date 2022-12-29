@@ -23,4 +23,9 @@ public interface InfoApi {
 
     @GET("info/random")
     LiveData<Resource<InfoDTO>> getRandom(@Query("n") Integer n);
+
+    @GET("info/pageByContentI")
+    LiveData<Resource<InfoPageDTO>> getpageByContentI(@Query("pageNum") Integer pageNum,
+                                            @Query("pageSize") Integer pageSize,
+                                            @Query("content") String content);
 }

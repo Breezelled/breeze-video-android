@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.videoitem.VideoItemFragment" >
+
+    <TextView
+        android:id="@+id/video_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:maxLines="1"
+        android:text="@string/video_item_title_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/video_item_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxEms="20"
+        android:maxLines="2"
+        android:text="They depended on each other. And the world depended on them."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_item_language" />
+
+    <TextView
+        android:id="@+id/video_item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxEms="16"
+        android:maxLines="1"
+        android:text="Documentary|Biography|Crime"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_item_image" />
+
+    <TextView
+        android:id="@+id/video_item_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Rating"
+        android:textColor="@color/orange_pri"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/video_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/video_item_title" />
+
+    <TextView
+        android:id="@+id/video_item_runtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Runtime"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/video_item_rating"
+        app:layout_constraintTop_toBottomOf="@+id/video_item_rating" />
+
+    <ImageView
+        android:id="@+id/video_item_image"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_item_runtime" />
+
+    <TextView
+        android:id="@+id/video_item_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxEms="16"
+        android:maxLines="1"
+        android:text="English|Dutch|French|German|Lithuanian"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_item_type" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,7 @@
     <string name="splash_skip_text">跳过</string>
     <string name="top_rating">风评最佳</string>
     <string name="all_video_text">所有影片</string>
+    <string name="video_item_title_text">标题</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_hint_text">点击搜索</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.cby2112114536.DTO;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -127,7 +128,7 @@ public class InfoPageDTO {
             this.pages = pages;
         }
 
-        public static class RecordsDTO {
+        public static class RecordsDTO implements Serializable {
             private int id;
             private String name;
             private String runtime;

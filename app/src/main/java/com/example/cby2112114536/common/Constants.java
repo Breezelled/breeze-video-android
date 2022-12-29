@@ -8,6 +8,8 @@ public class Constants {
 
     public static final String BASE_URL = "http://192.168.31.62:8080/";
 
+    public static final String CHART_URL = "http://192.168.31.62:8000/";
+
     public static final String ADS_GIF = "ads-files/splash1.GIF";
 
     public static final String ADS_PIC = "ads-files/splash1.jpg";

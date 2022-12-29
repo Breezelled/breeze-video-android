@@ -1,5 +1,6 @@
 package com.example.cby2112114536.DTO;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class InfoDTO {
@@ -32,7 +33,7 @@ public class InfoDTO {
         this.data = data;
     }
 
-    public static class DataDTO {
+    public static class DataDTO implements Serializable {
         private int id;
         private String name;
         private String runtime;

@@ -3,6 +3,8 @@ package com.example.cby2112114536.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Toast;
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private final String NEXT_STRING = "next";
     private final String PREVIOUS_STRING = "previous";
     private final String SKIP_STRING = "skip";
+    private AppBarConfiguration appBarConfiguration;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,15 +57,15 @@ public class MainActivity extends AppCompatActivity {
 //        View homeView = findViewById(R.id.navigation_home);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+        appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_movie, R.id.navigation_chart,
                 R.id.navigation_search, R.id.navigation_person)
                 .build();
 
-        navView.getMenu().findItem(R.id.navigation_chart).setVisible(false);
+//        navView.getMenu().findItem(R.id.navigation_chart).setVisible(false);
         ButterKnife.bind(this);
 
-        NavController navController = Navigation.findNavController(this,
+        navController = Navigation.findNavController(this,
                 R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
@@ -171,10 +175,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        Intent home = new Intent(Intent.ACTION_MAIN);
-        home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        home.addCategory(Intent.CATEGORY_HOME);
-        startActivity(home);
+    public boolean onSupportNavigateUp() {
+        return NavigationUI.navigateUp(navController, appBarConfiguration);
     }
 }
