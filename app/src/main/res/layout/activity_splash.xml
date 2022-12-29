@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.SplashActivity"
-    android:background="#fff"
+    android:background="@color/gray_deep"
     >
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/launcher" />
 
     <Button
         android:id="@+id/button"

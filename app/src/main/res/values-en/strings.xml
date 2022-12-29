@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Breeze Video</string>
+    <string name="title_home">Home</string>
+    <string name="title_movie">Popular</string>
+    <string name="title_search">Search</string>
+    <string name="title_chart">Analysis</string>
+    <string name="title_person">Account</string>
+    <string name="guide_home_text">Here is the home page~</string>
+    <string name="guide_next_page_text">Next</string>
+    <string name="guide_previous_page_text">Previous</string>
+    <string name="guide_skip_text">Skip</string>
+    <string name="guide_tips_text">TIPS</string>
+    <string name="guide_movie_text">Here is the popular videos~</string>
+    <string name="guide_search_text">You can search for videos here~</string>
+    <string name="guide_person_text">You can view the profile here～</string>
+    <string name="guide_end_text">Finish</string>
+    <string name="splash_skip_text">Skip</string>
+    <string name="top_rating">Top Rating</string>
+    <string name="all_video_text">All Video</string>
+</resources>

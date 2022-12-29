@@ -15,4 +15,6 @@
     <string name="guide_person_text">这里可以查看个人资料哦～</string>
     <string name="guide_end_text">结束</string>
     <string name="splash_skip_text">跳过</string>
+    <string name="top_rating">风评最佳</string>
+    <string name="all_video_text">所有影片</string>
 </resources>
