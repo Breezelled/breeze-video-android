@@ -28,4 +28,9 @@ public interface InfoApi {
     LiveData<Resource<InfoPageDTO>> getpageByContentI(@Query("pageNum") Integer pageNum,
                                             @Query("pageSize") Integer pageSize,
                                             @Query("content") String content);
+
+    @GET("info/pageByType")
+    LiveData<Resource<InfoPageDTO>> getpageByType(@Query("pageNum") Integer pageNum,
+                                                      @Query("pageSize") Integer pageSize,
+                                                      @Query("type") String type);
 }

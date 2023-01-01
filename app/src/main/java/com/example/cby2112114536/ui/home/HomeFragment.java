@@ -27,6 +27,7 @@ import com.example.cby2112114536.databinding.FragmentHomeBinding;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
+import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.youth.banner.Banner;
 import com.youth.banner.adapter.BannerAdapter;
 import com.youth.banner.indicator.CircleIndicator;
@@ -117,6 +118,8 @@ public class HomeFragment extends Fragment {
 
             }
         });
+        pageNum = 1;
+        records.clear();
         getInfo(pageNum, pageSize);
         getBanner();
         getHeaderTopRating(topN);
@@ -190,5 +193,6 @@ public class HomeFragment extends Fragment {
                     imageTitleNumAdapter.setDatas(ads);
                     banner.setAdapter(imageTitleNumAdapter);
                 });
+
     }
 }

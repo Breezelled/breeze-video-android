@@ -6,8 +6,8 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="gray_light">#2D2D2D</color>
-    <color name="gray_deep">#121212</color>
+    <color name="gray_light">#adadad</color>
+    <color name="gray_deep">#2D2D2D</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange_pri">#eb6d38</color>
     <color name="orange_deep">#D3490F</color>

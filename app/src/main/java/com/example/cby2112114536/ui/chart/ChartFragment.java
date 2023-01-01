@@ -37,51 +37,24 @@ public class ChartFragment extends Fragment {
         View root = binding.getRoot();
 
         CircleMenu circleMenu = binding.circleMenu;
+        boolean flags[] = new boolean[5];
+        Bundle bundle = new Bundle();
 
         circleMenu.setMainMenu(Color.parseColor("#CDCDCD"),
                         R.mipmap.icon_menu, R.mipmap.icon_cancel)
-                .addSubMenu(Color.parseColor("#258CFF"), R.drawable.icon_type)
-                .addSubMenu(Color.parseColor("#30A400"), R.drawable.icon_rating)
-                .addSubMenu(Color.parseColor("#FF4B32"), R.drawable.icon_dollar)
-                .addSubMenu(Color.parseColor("#8A39FF"), R.drawable.icon_others)
-                .addSubMenu(Color.parseColor("#FF6A00"), R.drawable.icon_prediction)
+                .addSubMenu(Color.parseColor("#E8906B"), R.drawable.icon_rating)
+                .addSubMenu(Color.parseColor("#E8906B"), R.drawable.icon_type)
+                .addSubMenu(Color.parseColor("#E8906B"), R.drawable.icon_dollar)
+                .addSubMenu(Color.parseColor("#E8906B"), R.drawable.icon_others)
+                .addSubMenu(Color.parseColor("#E8906B"), R.drawable.icon_prediction)
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
+
 
                     @Override
                     public void onMenuSelected(int index) {
-                        Bundle bundle = new Bundle();
                         bundle.putString("urlType", "chart");
-                        switch (index){
-                            case 0:
-
-                                bundle.putString("chartUrl", CHART_URL + "dashboard/analysis");
-                                Navigation.findNavController(getView())
-                                        .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
-                                break;
-                            case 1:
-                                bundle.putString("chartUrl", CHART_URL + "dashboard/rating");
-                                Navigation.findNavController(getView())
-                                        .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
-                                break;
-                            case 2:
-                                bundle.putString("chartUrl", CHART_URL + "dashboard/budgetRevenue");
-                                Navigation.findNavController(getView())
-                                        .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
-                                break;
-                            case 3:
-                                bundle.putString("chartUrl", CHART_URL + "dashboard/other");
-                                Navigation.findNavController(getView())
-                                        .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
-                                break;
-                            case 4:
-                                bundle.putString("chartUrl", CHART_URL + "prediction/revenuePrediction");
-                                Navigation.findNavController(getView())
-                                        .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
-                                break;
-                            default:
-                                break;
+                        flags[index] = true;
                         }
-                    }
 
                 }).setOnMenuStatusChangeListener(new OnMenuStatusChangeListener() {
 
@@ -90,6 +63,41 @@ public class ChartFragment extends Fragment {
 
                     @Override
                     public void onMenuClosed() {
+                        for (int i = 0; i < flags.length; i++) {
+                            if (flags[i]) {
+                                flags[i] = false;
+                                switch (i){
+                                    case 0:
+                                        bundle.putString("chartUrl", CHART_URL + "dashboard/rating");
+                                        Navigation.findNavController(getView())
+                                                .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
+                                        break;
+                                    case 1:
+                                        bundle.putString("chartUrl", CHART_URL + "dashboard/analysis");
+                                        Navigation.findNavController(getView())
+                                                .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
+                                        break;
+                                    case 2:
+                                        bundle.putString("chartUrl", CHART_URL + "dashboard/budgetRevenue");
+                                        Navigation.findNavController(getView())
+                                                .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
+                                        break;
+                                    case 3:
+                                        bundle.putString("chartUrl", CHART_URL + "dashboard/other");
+                                        Navigation.findNavController(getView())
+                                                .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
+                                        break;
+                                    case 4:
+                                        bundle.putString("chartUrl", CHART_URL + "prediction/revenuePrediction");
+                                        Navigation.findNavController(getView())
+                                                .navigate(R.id.action_navigation_chart_to_webFragment, bundle);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+
                     }
 
                 });

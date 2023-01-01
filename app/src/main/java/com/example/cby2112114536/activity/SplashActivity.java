@@ -24,8 +24,10 @@ import com.bumptech.glide.request.transition.Transition;
 import com.example.cby2112114536.R;
 import com.example.cby2112114536.api.SplashApi;
 import com.example.cby2112114536.databinding.ActivitySplashBinding;
+import com.example.cby2112114536.utils.LocaleUtil;
 import com.example.cby2112114536.utils.NetUtil;
 
+import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
@@ -43,6 +45,9 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        Locale userLocale = LocaleUtil.getUserLocale(this);
+        LocaleUtil.updateLocale(this, userLocale);
 
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

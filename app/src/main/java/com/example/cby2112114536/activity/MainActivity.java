@@ -1,7 +1,10 @@
 package com.example.cby2112114536.activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,6 +18,8 @@ import com.app.hubert.guide.listener.OnLayoutInflatedListener;
 import com.app.hubert.guide.listener.OnPageChangedListener;
 import com.app.hubert.guide.model.GuidePage;
 import com.example.cby2112114536.R;
+import com.example.cby2112114536.VO.UserVO;
+import com.example.cby2112114536.utils.LocaleUtil;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +29,13 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.cby2112114536.databinding.ActivityMainBinding;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.bmob.v3.BmobUser;
 
 /**
  * @author breeze
@@ -50,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Locale userLocale = LocaleUtil.getUserLocale(this);
+        LocaleUtil.updateLocale(this, userLocale);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -62,7 +74,15 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_search, R.id.navigation_person)
                 .build();
 
-//        navView.getMenu().findItem(R.id.navigation_chart).setVisible(false);
+        if (BmobUser.isLogin()) {
+            UserVO user = BmobUser.getCurrentUser(UserVO.class);
+            if ("Breeze".equals(user.getUsername())){
+                navView.getMenu().findItem(R.id.navigation_chart).setVisible(true);
+            }
+        } else {
+            navView.getMenu().findItem(R.id.navigation_chart).setVisible(false);
+        }
+
         ButterKnife.bind(this);
 
         navController = Navigation.findNavController(this,
@@ -178,4 +198,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         return NavigationUI.navigateUp(navController, appBarConfiguration);
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Locale userLocale = LocaleUtil.getUserLocale(this);
+        //系统语言改变了应用保持之前设置的语言
+        if (userLocale != null) {
+            Locale.setDefault(userLocale);
+            Configuration configuration = new Configuration(newConfig);
+            configuration.setLocale(userLocale);
+            getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
+        }
+    }
+
 }

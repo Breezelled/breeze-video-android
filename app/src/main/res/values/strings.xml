@@ -20,4 +20,59 @@
     <string name="video_item_title_text">标题</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search_hint_text">点击搜索</string>
+    <string name="tab_layout_intro_text">简介</string>
+    <string name="tab_layout_more_text">更多</string>
+    <string name="copyright_text">Copyright © 陈柏宇 2112114536</string>
+    <string name="login_name_hint">请输入账号</string>
+    <string name="login_pwd_hint">请输入密码</string>
+    <string name="register_text">快速注册</string>
+    <string name="find_pwd_text">忘记密码</string>
+    <string name="login_button_text">登录</string>
+    <string name="register_email_text">请输入邮箱</string>
+    <string name="avatar_text">头像</string>
+    <string name="username_text">用户名</string>
+    <string name="email_text">邮箱</string>
+    <string name="info_nickname_text">昵称</string>
+    <string name="info_sex_text">性别</string>
+    <string name="info_intro_text">签名</string>
+    <string name="info_logout_text">退出登录</string>
+    <string name="error_username">账号不可以为空</string>
+    <string name="error_pwd">密码不可以为空</string>
+    <string name="error_email">邮箱不可以为空</string>
+    <string name="intro_text">Grandescunt Aucta Labore</string>
+    <string name="person_hit_to_login">点击登录</string>
+    <string name="pwd_text">密码</string>
+    <string name="change_pwd">点击修改密码</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="switch_dark_mode">切换黑暗模式</string>
+    <string name="setting_text">设置</string>
+    <string name="language_text">语言</string>
+    <string name="confirm_text">确定</string>
+    <string name="cancel_text">取消</string>
+    <string name="previous_pwd_text">请输入旧密码和新密码</string>
+    <string name="previous_pwd_error_text">密码错误</string>
+    <string name="previous_text">旧密码</string>
+    <string name="new_text">新密码</string>
+    <string name="change_pwd_succeeded">修改密码成功</string>
+    <string name="change_pwd_failed">修改密码失败</string>
+    <string name="logout_succeeded">退出用户成功</string>
+    <string name="login_succeeded">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="register_succeeded">注册成功</string>
+    <string name="register_failed">注册失败</string>
+    <string name="reset_pwd1">重置密码请求成功，请到</string>
+    <string name="reset_pwd2">邮箱进行密码重置操作</string>
+    <string name="map_permission_text">你拒绝了GPS定位权限，无法定位</string>
+    <string name="video_item_map_nearby_text">附近影院</string>
+    <string name="map_mark_name">名称</string>
+    <string name="map_mark_distance">距离</string>
+    <string name="map_mark_address">地址</string>
+    <string name="map_mark_phone">电话</string>
+
+    <string-array name="language_spinner_array">
+        <item>中文</item>
+        <item>English</item>
+    </string-array>
+
 </resources>
